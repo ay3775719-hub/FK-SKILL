@@ -1,0 +1,13 @@
+{
+  "name": "portrait-reference-prompt-skill",
+  "owner": {
+    "name": "Private local user"
+  },
+  "plugins": [
+    {
+      "name": "portrait-reference-prompt-skill",
+      "source": "./",
+      "description": "Personal portrait prompt framework"
+    }
+  ]
+}

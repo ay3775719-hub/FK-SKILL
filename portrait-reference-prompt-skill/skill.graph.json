@@ -1,0 +1,297 @@
+{
+  "artifacts": [
+    {
+      "id": "claude_plugin_marketplace_json",
+      "path": ".claude-plugin/marketplace.json",
+      "sha256": "b7526639427a59c4e897264e633b5548003f3b6144a9fdf92da92a6c1ea40f24",
+      "type": "package_file"
+    },
+    {
+      "id": "claude_plugin_plugin_json",
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "3f4c036d2d9997e819524f5f3a7dfd99a8be0ec0c5b18141dc2999f9abbc284d",
+      "type": "package_file"
+    },
+    {
+      "id": "agents_document",
+      "path": "AGENTS.md",
+      "sha256": "913aca3b1ba13f45a1f23cd167fd4f9066d31c51ff16252c3e604b340f1bb5e8",
+      "type": "companion_instruction"
+    },
+    {
+      "id": "assets_negative_prompt_txt",
+      "path": "assets/negative-prompt.txt",
+      "sha256": "af22d76cac262cff637bbe482a5ebeb89a696072e8a7b014bc7ddc8e820a87e2",
+      "type": "asset"
+    },
+    {
+      "id": "assets_original_framework_txt",
+      "path": "assets/original-framework.txt",
+      "sha256": "87493c5759d73f77873cc1896265c418c84c0837234511d6918a4ee7f5fa116b",
+      "type": "asset"
+    },
+    {
+      "id": "assets_source_integrity_json",
+      "path": "assets/source-integrity.json",
+      "sha256": "1dba7badf031e96f6d80246582725157207fa37f7a895c3e501f37cefd1da0df",
+      "type": "asset"
+    },
+    {
+      "id": "decisions_md",
+      "path": "DECISIONS.md",
+      "sha256": "1537fcee00f3d4b2bb11644a79ebb474c5f92aaba5ba3b7e083f0fdbc7c3d332",
+      "type": "package_file"
+    },
+    {
+      "id": "discovery_json",
+      "path": "discovery.json",
+      "sha256": "a8801fd958198420f8b57644ac8172ee26c739c7e4995e6f6d73580dfc1dfd6f",
+      "type": "package_file"
+    },
+    {
+      "id": "makeup_holdout_input",
+      "path": "evals/golden/makeup-holdout/input.txt",
+      "sha256": "331089c7c4fd1e29032f9c0808458ebbeb648fd4b750643e97e2bb4427469113",
+      "type": "golden_input"
+    },
+    {
+      "id": "evals_golden_makeup_holdout_reference_md",
+      "path": "evals/golden/makeup-holdout/reference.md",
+      "sha256": "21ab8af13f9ee7774c752e413094d4e247107630b7f3f4b775310321398bcb66",
+      "type": "package_file"
+    },
+    {
+      "id": "specified_scene_input",
+      "path": "evals/golden/specified-scene/input.txt",
+      "sha256": "e469d0b869e6914e9df553aabf62a5e22db1a5fb3d2ca4d9e4a0a143af126ae2",
+      "type": "golden_input"
+    },
+    {
+      "id": "evals_golden_specified_scene_reference_md",
+      "path": "evals/golden/specified-scene/reference.md",
+      "sha256": "0d05664c501e0b1cdee5fc9e85c9d1c3a7392e3c8c984c7569043f3446db5b56",
+      "type": "package_file"
+    },
+    {
+      "id": "three_poses_input",
+      "path": "evals/golden/three-poses/input.txt",
+      "sha256": "136e5eb2ea8bcbe6224d599922f3ec48636d65c22d933318e605b0a7945c07f9",
+      "type": "golden_input"
+    },
+    {
+      "id": "evals_golden_three_poses_reference_md",
+      "path": "evals/golden/three-poses/reference.md",
+      "sha256": "9be61dce8180c113ebd8df9b607b7af31938aa38f25aa9915d56bd7f8efeda05",
+      "type": "package_file"
+    },
+    {
+      "id": "evals_portrait_reference_prompt_skill_eval_md",
+      "path": "evals/portrait-reference-prompt-skill.eval.md",
+      "sha256": "b23f9a1e7b21beacbf6289f706ef0c93b118ee9eff5ce8dea76def2523dcd3a4",
+      "type": "eval_spec"
+    },
+    {
+      "id": "install_ps1",
+      "path": "install.ps1",
+      "sha256": "aea90539ad986b84c1f4c14783d57a4ae22958133f07af67c155d8ea2a859dc8",
+      "type": "package_file"
+    },
+    {
+      "id": "install_sh",
+      "path": "install.sh",
+      "sha256": "1359167f2646885952cd1781ebdf647b77a0172c1db2c1014c9f482ccb816094",
+      "type": "package_file"
+    },
+    {
+      "id": "interview_json",
+      "path": "interview.json",
+      "sha256": "008e5d88708cffba4e69d363189b87ccc8b8d953d9f5eb26c603414f915ed1d1",
+      "type": "package_file"
+    },
+    {
+      "id": "license",
+      "path": "LICENSE",
+      "sha256": "677d341c86377f99eeadfe454629ed487e23d2abd09ea103172873f88d0b8dff",
+      "type": "package_file"
+    },
+    {
+      "id": "readme_md",
+      "path": "README.md",
+      "sha256": "6505fe658c28388222de0d1b219fce40621bcf96b634e2fc0fa3868cf1b0a84b",
+      "type": "package_file"
+    },
+    {
+      "id": "references_framework_md",
+      "path": "references/framework.md",
+      "sha256": "720038db6026033abcdddb5ff3a18af519d8639a339631bdb200018467912e08",
+      "type": "reference"
+    },
+    {
+      "id": "scripts_check_output_py",
+      "path": "scripts/check_output.py",
+      "sha256": "51afd2a895188483f2c3c527e40c5b532ec22675214a9d41f9204811f9d57ea6",
+      "type": "script"
+    },
+    {
+      "id": "scripts_dependency_health_py",
+      "path": "scripts/dependency_health.py",
+      "sha256": "7c8beebbc46ff1a7e3ef800626e0c7a377b0c27a6c00b98a9eb2688ed8a4285e",
+      "type": "script"
+    },
+    {
+      "id": "scripts_evolve_py",
+      "path": "scripts/evolve.py",
+      "sha256": "5f35ea818449d0dd51f7d6d0359897659425cc4f2a8dcb66fe6a83540e3a2cb5",
+      "type": "script"
+    },
+    {
+      "id": "scripts_review_staleness_py",
+      "path": "scripts/review_staleness.py",
+      "sha256": "706b04f17a6936305017fa94da3840eeb2012fcca661ee6dca11c0089035dab1",
+      "type": "script"
+    },
+    {
+      "id": "scripts_run_evals_py",
+      "path": "scripts/run_evals.py",
+      "sha256": "7a2776a33d1c90e76bb1571413ce4996fc1938775509c4215aaa1fe7409c9202",
+      "type": "script"
+    },
+    {
+      "id": "scripts_schema_drift_py",
+      "path": "scripts/schema_drift.py",
+      "sha256": "4d15b1fd14324c7305e4017b91b2b35ee90e589e007c7eb1bad7f1ddd4d96687",
+      "type": "script"
+    },
+    {
+      "id": "scripts_skill_document_py",
+      "path": "scripts/skill_document.py",
+      "sha256": "ec86981b75ea29263c9e71295f284067096754bbc4b294e7f2e11560830e61b5",
+      "type": "script"
+    },
+    {
+      "id": "scripts_staleness_check_py",
+      "path": "scripts/staleness_check.py",
+      "sha256": "b3be7f9e4832d42d301a82395dba08383cf417535e8e42c2e2f73b6ea98a192b",
+      "type": "script"
+    },
+    {
+      "id": "scripts_success_ledger_py",
+      "path": "scripts/success_ledger.py",
+      "sha256": "f0eee7d0deac4dca979c325ff3920231cdc6ad0a1263b5d801dd93c0e47b036f",
+      "type": "script"
+    },
+    {
+      "id": "scripts_wiki_maintenance_py",
+      "path": "scripts/wiki_maintenance.py",
+      "sha256": "e8b65667530f7b78aece53b3fd2c49e05b53767e2d6ef1f98ff37db58b04ce14",
+      "type": "script"
+    },
+    {
+      "id": "skill_document",
+      "path": "SKILL.md",
+      "sha256": "7d118622a143000829d1ee7d2bd57cd707ea40845d6469288c14448179613b5e",
+      "type": "instruction"
+    },
+    {
+      "id": "third_party_license_txt",
+      "path": "THIRD_PARTY_LICENSE.txt",
+      "sha256": "130901e9ff46d221b1e53b41c335cfcfedb21bb58b22acad4aaca241222616c3",
+      "type": "package_file"
+    },
+    {
+      "id": "wiki_index_md",
+      "path": "wiki/index.md",
+      "sha256": "1ec67aa333fdc8c3a20abe80caed9c5edb3e1f0982d672c3eaca12d6e1c846e2",
+      "type": "package_file"
+    },
+    {
+      "id": "wiki_logs_md",
+      "path": "wiki/logs.md",
+      "sha256": "192797326b725dc64ceac7583a3209fe29004a3cbd49c424bc951b3737548cda",
+      "type": "package_file"
+    },
+    {
+      "id": "wiki_readme_md",
+      "path": "wiki/README.md",
+      "sha256": "490d49a9152a61ffc5f284655da3ea2964a25e53618e1ea455c8788e358fbb1f",
+      "type": "package_file"
+    },
+    {
+      "id": "wiki_skill_impact_md",
+      "path": "wiki/skill-impact.md",
+      "sha256": "18de5fb415468472e0bf0123d36ffa3c3fbe16e2b82291e55dce355e8c37be79",
+      "type": "package_file"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "every_expected_is_reachable",
+      "severity": "error"
+    },
+    {
+      "id": "deterministic_multistep_has_orchestrator",
+      "severity": "error"
+    },
+    {
+      "id": "semantic_recon_contracts_ready",
+      "severity": "error"
+    }
+  ],
+  "edges": [
+    {
+      "from": "makeup_holdout_result",
+      "relation": "compared_against",
+      "to": "evals_golden_makeup_holdout_reference_md"
+    },
+    {
+      "from": "specified_scene_result",
+      "relation": "compared_against",
+      "to": "evals_golden_specified_scene_reference_md"
+    },
+    {
+      "from": "three_poses_result",
+      "relation": "compared_against",
+      "to": "evals_golden_three_poses_reference_md"
+    }
+  ],
+  "gates": [
+    {
+      "id": "spec",
+      "inputs": [
+        "skill_document",
+        "package_index"
+      ]
+    },
+    {
+      "id": "security",
+      "inputs": [
+        "package"
+      ]
+    },
+    {
+      "id": "pipeline",
+      "inputs": [
+        "scripts",
+        "dependency_manifests"
+      ]
+    },
+    {
+      "id": "eval_schema",
+      "inputs": [
+        "eval_specs",
+        "golden_cases",
+        "eval_runner"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "semantic_recon": {
+    "reasons": [],
+    "sources": [],
+    "status": "NOT_REQUIRED"
+  },
+  "skill": "portrait-reference-prompt-skill",
+  "workflow": {
+    "kind": "independent"
+  }
+}

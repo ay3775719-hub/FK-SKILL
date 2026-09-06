@@ -1,0 +1,101 @@
+{
+  "question": "如何保持主图人物、妆容和穿搭，并将姿势参考变成十张独立人像提示词？",
+  "trigger": [
+    "用户提交主图和姿势图，要求按个人框架输出"
+  ],
+  "decision": [
+    "逐条复制提示词用于用户选择的生图工具",
+    "查看绑定表并纠正拍法理解"
+  ],
+  "evidence": [
+    "用户主参考图",
+    "用户姿势参考图",
+    "完整原框架与已批准优化"
+  ],
+  "success_measure": "十条独立正负提示词；来源与绑定明确；固定负面词逐条一致；缺图不猜。",
+  "outcome": "自检、十张绑定表及十条中文人像摄影提示词",
+  "intended_users": [
+    "本对话用户本人"
+  ],
+  "input_types": [
+    "user-supplied images",
+    "unstructured text"
+  ],
+  "output_artifacts": [
+    "Markdown response with ten independent photo prompts"
+  ],
+  "use_cases": [
+    "拼接主图分工",
+    "单张主图识别",
+    "少量姿势参考同场景延伸",
+    "侧脸身份保护",
+    "缺图澄清"
+  ],
+  "examples": [
+    {
+      "invocation": "/portrait-reference-prompt-skill 按这些图出十条提示词",
+      "description": "完整流程"
+    }
+  ],
+  "permissions_systems": [
+    "读取用户主动提供的图片和文本",
+    "默认无网络、无生图、无发布"
+  ],
+  "typical_completion_time": "取决于参考图数量和当前模型速度；不设固定承诺",
+  "compatibility": {
+    "declared": [
+      "codex"
+    ],
+    "certified": []
+  },
+  "environment": {
+    "documentation_sources": [
+      "完整个人框架"
+    ],
+    "data_sources": [
+      "用户本次提供的图片"
+    ],
+    "required_capabilities": [
+      "视觉理解与中文写作",
+      "读取本地UTF-8规范"
+    ],
+    "readiness_checks": [
+      "主图清晰",
+      "拼图区域明确",
+      "至少一张姿势图或明确自由编排要求"
+    ]
+  },
+  "risk": {
+    "tier": "low",
+    "permissions": [
+      "读取主动提供的参考图"
+    ],
+    "mutation_boundary": "read-only",
+    "approval_required": []
+  },
+  "software_mutation": {
+    "applies": false
+  },
+  "data_interfaces": {
+    "applies": false
+  },
+  "semantic_recon": {
+    "applies": false
+  },
+  "semantic_contract": {
+    "applies": false
+  },
+  "routing_tests": {
+    "should_trigger": [
+      "按我的人像框架出十条",
+      "主图锁脸姿势图复刻",
+      "姿势不足同场景延伸"
+    ],
+    "should_not_trigger": [
+      "解释摄影光圈",
+      "写产品广告分镜",
+      "制作Excel报表"
+    ]
+  },
+  "support_tier": "community"
+}

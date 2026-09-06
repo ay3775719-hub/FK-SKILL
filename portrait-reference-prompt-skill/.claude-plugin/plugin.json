@@ -1,0 +1,5 @@
+{
+  "name": "portrait-reference-prompt-skill",
+  "version": "1.0.1",
+  "description": "完整个人框架：主图锁定人物，姿势图复刻拍法，输出十条独立正负提示词。"
+}

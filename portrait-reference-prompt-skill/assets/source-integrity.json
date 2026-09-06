@@ -1,0 +1,11 @@
+{
+  "source": "user-supplied pasted-text.txt",
+  "original_sha256": "87493c5759d73f77873cc1896265c418c84c0837234511d6918a4ee7f5fa116b",
+  "original_preserved_byte_for_byte": true,
+  "approved_changes": [
+    "optional makeup preset",
+    "clean photographic template",
+    "missing-image handling"
+  ],
+  "negative_sha256": "ff66e1e956d12cd1d6ebf58efbe172ea58fcb6a8ce3f6f0e8beb4cd65d63ffb2"
+}
