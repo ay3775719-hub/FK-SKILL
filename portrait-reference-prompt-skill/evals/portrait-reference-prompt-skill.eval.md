@@ -11,14 +11,14 @@
   "skill": "portrait-reference-prompt-skill",
   "criteria": [
     {
-      "id": "ten-independent",
-      "text": "十张按顺序编号，逐张正负分段，含前置自检与3:4竖版说明",
+      "id": "sequential-independent",
+      "text": "照片从1开始连续编号，数量等于姿势参考图，逐张正负分段，含前置自检与3:4竖版说明",
       "type": "command",
       "cmd": "python scripts/check_output.py {output} --check format"
     },
     {
       "id": "fixed-negative",
-      "text": "每张负面词与用户原文完全一致",
+      "text": "每张负面词与 assets/negative-prompt.txt 完全一致",
       "type": "command",
       "cmd": "python scripts/check_output.py {output} --check negative"
     },

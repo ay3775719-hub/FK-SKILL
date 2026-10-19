@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Check a completed ten-photo Markdown response without inspecting source images.
+"""Check a completed portrait Markdown response without inspecting source images.
 
-Run: python scripts/check_output.py output.md [--check format|negative|clean|all]
+Run: python scripts/check_output.py output.md [--count N] [--check format|negative|clean|all]
+Output count should equal the number of pose references; --count verifies it.
 This reads local text only. It does not generate images or assess face similarity.
 """
 from __future__ import annotations
@@ -20,13 +21,18 @@ RULE_WORDS = ('严格复刻', '只参考', '唯一来源', 'SOP', '审核说明'
               '见上文', '参考图绑定', '主参考图大头', '--no')
 
 
-def inspect_output(text: str, check: str = 'all') -> list[str]:
+def inspect_output(text: str, check: str = 'all', count: int | None = None) -> list[str]:
     """Return structural and lexical failures; visual/semantic quality is out of scope."""
     errors: list[str] = []
     expected_negative = (ROOT / 'assets/negative-prompt.txt').read_text(encoding='utf-8').strip()
     matches = list(PHOTO.finditer(text))
-    if [int(item.group(1)) for item in matches] != list(range(1, 11)):
-        errors.append('需要按顺序提供照片 1～10，共十条独立照片。')
+    numbers = [int(item.group(1)) for item in matches]
+    if not matches:
+        errors.append('未找到任何按“照片 X：”编号的照片。')
+    elif numbers != list(range(1, len(numbers) + 1)):
+        errors.append(f'照片需从 1 开始连续编号，实际编号为：{numbers}。')
+    elif count is not None and numbers != list(range(1, count + 1)):
+        errors.append(f'应输出 {count} 条（等于姿势参考图数量），实际 {len(numbers)} 条。')
     positives: list[str] = []
     for index, match in enumerate(matches):
         number = match.group(1)
@@ -59,7 +65,7 @@ def inspect_output(text: str, check: str = 'all') -> list[str]:
         errors.append('存在完全重复的正向提示词。')
     if check in ('all', 'format'):
         prefix = text[:matches[0].start()] if matches else text
-        for term in ('主参考图识别', '最终场景', '十张绑定表', '色彩自检'):
+        for term in ('主参考图识别', '各张场景来源', '绑定表', '色彩自检'):
             if term not in prefix:
                 errors.append(f'照片提示词之前缺少“{term}”。')
     return errors
@@ -69,10 +75,12 @@ def main() -> int:
     """Validate one UTF-8 file and return a machine-readable result."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output', type=Path)
+    parser.add_argument('--count', type=int, default=None,
+                        help='expected number of photos (pose reference count)')
     parser.add_argument('--check', choices=('all', 'format', 'negative', 'clean'), default='all')
     args = parser.parse_args()
     try:
-        errors = inspect_output(args.output.read_text(encoding='utf-8-sig'), args.check)
+        errors = inspect_output(args.output.read_text(encoding='utf-8-sig'), args.check, args.count)
     except (OSError, UnicodeError) as exc:
         print(json.dumps({'passed': False, 'error_type': 'input', 'message': str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
